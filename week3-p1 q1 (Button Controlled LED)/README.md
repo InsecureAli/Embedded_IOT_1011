@@ -1,6 +1,6 @@
 # Week 3 Part 1 - Timer Controlled LED
 
-**Name:** Ali Hassan  
+**Name:** Ali Hassan
 **Roll No:** 23-NTU-CS-1011  
 
 ## Description
