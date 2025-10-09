@@ -1,6 +1,6 @@
 # Week 3 Part 2 - Timer Interrupt Blink
 
-**Name:** Ali Hassan  
+**Name:** Ali Hassan
 **Roll No:** 23-NTU-CS-1011  
 
 ## Description
