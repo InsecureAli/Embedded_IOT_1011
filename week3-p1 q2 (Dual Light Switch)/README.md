@@ -1,21 +1,31 @@
-# Week 3 Part 2 - Timer Interrupt Blink
+# Week 3 Part 1 - Q2 Dual LED Button Control
 
-**Name:** Ali Hassan
+**Name:** Ali Hassan  
 **Roll No:** 23-NTU-CS-1011  
 
 ## Description
-This code demonstrates the use of an ESP32 hardware timer to toggle an LED every 1 second using an interrupt routine.
+This project demonstrates how to control two LEDs using a single push button with interrupt functionality on the ESP32.  
+Each button press toggles both LEDs simultaneously, turning them ON or OFF together.
 
 ## Components
-- ESP32 Development Board
-- On-board LED (GPIO 5)
+- ESP32 Development Board  
+- LED 1 (GPIO 18)  
+- LED 2 (GPIO 21)  
+- Push Button (GPIO 35)
 
 ## Working
-- The hardware timer is configured to tick at 1 MHz.
-- The timer triggers an interrupt every 1,000,000 microseconds (1 second).
-- Inside the ISR, the LED state toggles, creating a continuous blink without using `delay()`.
+1. The push button is connected with an internal pull-up resistor.  
+2. A falling-edge interrupt is attached to the button pin.  
+3. When the button is pressed, the interrupt triggers the `handleButton()` function.  
+4. Inside the ISR, both LEDs are toggled together using a shared `ledState` flag.  
+5. The main loop remains empty, allowing for non-blocking operation.
 
 ## Learning Outcomes
-- Understanding hardware timer interrupts
-- Non-blocking LED control
-- Efficient use of ESP32 timers
+- Using GPIO interrupts on the ESP32  
+- Handling multiple outputs from a single input  
+- Writing efficient, non-blocking embedded programs  
+- Understanding the role of ISRs in digital I/O control
+
+## Code Author
+**Ali Hassan**  
+**Roll No:** 23-NTU-CS-1011
