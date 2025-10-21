@@ -6,7 +6,7 @@
 
 // --- Pin configuration ---
 #define DHTPIN 14        // DHT22 data pin
-#define DHTTYPE DHT22   // Change to DHT11 if needed
+#define DHTTYPE DHT11   // Change to DHT11 if needed
 
 #define SDA_PIN 21       // I2C SDA
 #define SCL_PIN 22       // I2C SCL
@@ -22,7 +22,7 @@ DHT dht(DHTPIN, DHTTYPE);
 // --- Setup function ---
 void setup() {
   Serial.begin(115200);
-  Serial.println("Hello, ESP32!");
+  Serial.println("Hello iOT");
 
   // Initialize I2C on custom pins
   Wire.begin(SDA_PIN, SCL_PIN);
@@ -66,7 +66,7 @@ void loop() {
   display.clearDisplay();
   display.setTextSize(1);
   display.setCursor(0, 0);
-  display.println("Hello IoT");
+  display.println("AI Lab Temperature: ");
   display.setCursor(0, 16);
   display.print("Temp: ");
   display.setTextSize(2);
